@@ -10,6 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#8a4fff">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#8a4fff">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#1e1b29">
 </head>
 <body>
   <div id="particles-bg"></div>
@@ -98,7 +108,11 @@
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
-      <p class="copyright">Célio Nora Júnior – Desenvolvedor Web com Presença</p>
+      <p class="copyright">
+  © <span id="current-year"></span> Célio Nora Júnior | Desenvolvedor Web
+  <br>
+  <span class="small-text">Criando presenças digitais que impressionam</span>
+</p>
     </div>
   </footer>
 
@@ -106,6 +120,7 @@
   <script src="assets/particles.min.js"></script>
   <script>
     particlesJS.load('particles-bg', 'assets/particles-config.json');
+	 document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
