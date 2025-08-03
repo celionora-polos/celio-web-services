@@ -35,13 +35,13 @@
                             <li>Hospedagem incluída</li>
                             <li>Sem domínio exclusivo</li>
                         </ul>
-                        <button class="cta-button">Quero este plano</button>
+                        <a href="https://wa.me/5598996012172?text=Olá!%20Tenho%20interesse%20no%20plano%20Link%20na%20Bio%20Essencial%20(R$%20250)" class="cta-button">Quero este plano</a>
                     </div>
 
                     <!-- Plano 2 -->
                     <div class="pricing-card">
                         <div class="card-header">
-                            <h3>Link na Bio com Domínio Próprio</h3>
+                            <h3>Link na Bio com Domínio</h3>
                             <div class="price">R$ 400 <span class="monthly">+ R$ 50/mês</span></div>
                         </div>
                         <ul class="features">
@@ -50,7 +50,7 @@
                             <li>Atualizações mensais simples</li>
                             <li>Suporte básico</li>
                         </ul>
-                        <button class="cta-button">Quero este plano</button>
+                        <a href="https://wa.me/5598996012172?text=Olá!%20Tenho%20interesse%20no%20plano%20Link%20na%20Bio%20com%20Domínio%20(R$%20400%20+%20R$%2050/mês)" class="cta-button">Quero este plano</a>
                     </div>
 
                     <!-- Plano 3 (Mais Popular) -->
@@ -58,20 +58,20 @@
                         <div class="popular-badge">Mais Popular</div>
                         <div class="card-header">
                             <h3>Landing Page Profissional</h3>
-                            <div class="price">R$ 700 <span class="monthly">+ R$ 50/mês</span></div>
+                            <div class="price">R$ 700</div>
                         </div>
                         <ul class="features">
                             <li>Página com seções: Sobre, Serviços, Contato</li>
                             <li>Visual limpo, moderno e responsivo</li>
                             <li>Sem domínio exclusivo</li>
                         </ul>
-                        <button class="cta-button">Quero este plano</button>
+                        <a href="https://wa.me/5598996012172?text=Olá!%20Tenho%20interesse%20no%20plano%20Landing%20Page%20Profissional%20(R$%20700)" class="cta-button">Quero este plano</a>
                     </div>
 
                     <!-- Plano 4 -->
                     <div class="pricing-card">
                         <div class="card-header">
-                            <h3>Landing Page com Domínio Exclusivo</h3>
+                            <h3>Landing Page Completa</h3>
                             <div class="price">R$ 1.200 <span class="monthly">+ R$ 100/mês</span></div>
                         </div>
                         <ul class="features">
@@ -80,7 +80,7 @@
                             <li>Suporte completo</li>
                             <li>Manutenção mensal inclusa</li>
                         </ul>
-                        <button class="cta-button">Quero este plano</button>
+                        <a href="https://wa.me/5598996012172?text=Olá!%20Tenho%20interesse%20no%20plano%20Landing%20Page%20Completa%20(R$%201200%20+%20R$%20100/mês)" class="cta-button">Quero este plano</a>
                     </div>
                 </div>
             </div>
@@ -116,28 +116,5 @@
         </svg>
         <span>Entre em contato</span>
     </a>
-
-    <script>
-        // Suave scroll para os planos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Animação dos cards
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.pricing-card');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 150 * index);
-            });
-        });
-    </script>
 </body>
 </html>
