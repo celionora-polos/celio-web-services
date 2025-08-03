@@ -8,10 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="particles-js"></div>
+  <div id="particles-bg"></div>
 
   <header class="header">
     <div class="container">
@@ -90,8 +91,12 @@
   <footer class="footer">
     <div class="container">
       <div class="social-links">
-        <a href="https://www.instagram.com/ocelionora/" target="_blank">Instagram</a>
-        <a href="https://linkedin.com/in/celionorajunior" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/ocelionora/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/in/celionorajunior" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
       <p class="copyright">Célio Nora Júnior – Desenvolvedor Web com Presença</p>
     </div>
@@ -100,7 +105,7 @@
   <!-- Particles.js -->
   <script src="assets/particles.min.js"></script>
   <script>
-    particlesJS.load('particles-js', 'assets/particles-config.json');
+    particlesJS.load('particles-bg', 'assets/particles-config.json');
   </script>
 </body>
 </html>
