@@ -44,7 +44,7 @@ body {
   position: relative;
   background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   text-align: center;
-  padding: 40px 20px 80px;
+  padding: 30px 20px 60px;
   overflow: hidden;
   color: var(--white);
 }
@@ -94,22 +94,49 @@ h1 {
   }
 }
 
+/* Mobile Styles */
 @media (max-width: 767px) {
+  .header {
+    padding: 20px 15px 40px;
+  }
+  
+  .site-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .subtitle {
+    font-size: 0.85rem;
+  }
+  
   .pricing-grid {
     grid-template-columns: 1fr;
   }
   
-  .site-logo {
-    width: 45px;
-    height: 45px;
+  .pricing-card {
+    padding: 20px;
   }
   
-  h1 {
-    font-size: 1.8rem;
+  .footer {
+    padding: 30px 15px;
   }
   
-  .subtitle {
-    font-size: 0.9rem;
+  .social-links a {
+    font-size: 1.3rem;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+  
+  .small-text {
+    font-size: 0.7rem;
   }
 }
 
