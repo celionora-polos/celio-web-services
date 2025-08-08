@@ -333,32 +333,75 @@ h1 {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 60px;
+  height: 60px;
   background-color: #25D366;
-  color: #fff;
-  padding: 15px;
-  font-size: 1.5rem;
+  color: white;
   border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  line-height: 60px;
   z-index: 999;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-}
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #1ebe57;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  transform: scale(1.1);
+}
+
+/* Tabela Comparativa */
 /* Tabela Comparativa */
 .comparison-section {
   margin: 40px auto;
   overflow-x: auto;
+  padding: 0 20px;
 }
+
 .comparison-table {
+  min-width: 600px;
   width: 100%;
   border-collapse: collapse;
   text-align: center;
-  background-color: rgba(255,255,255,0.02);
+  background-color: rgba(255, 255, 255, 0.02);
   color: var(--text);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+
+.comparison-table th,
+.comparison-table td {
+  padding: 14px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+}
+
+.comparison-table th {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .comparison-section {
+    padding: 0 10px;
+  }
+
+  .comparison-table {
+    font-size: 0.8rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 10px 6px;
+  }
+}
+
 .comparison-table th, .comparison-table td {
   padding: 12px 10px;
   border: 1px solid rgba(255,255,255,0.1);
