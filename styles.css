@@ -329,6 +329,7 @@ h1 {
 }
 
 /* Botão Flutuante WhatsApp */
+/* Botão Flutuante WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -338,15 +339,13 @@ h1 {
   background-color: #25D366;
   color: white;
   border-radius: 50%;
-  text-align: center;
-  font-size: 32px;
-  line-height: 60px;
-  z-index: 999;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  font-size: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 9999; /* Importante para ficar acima de tudo */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .whatsapp-float:hover {
@@ -355,7 +354,6 @@ h1 {
 }
 
 /* Tabela Comparativa */
-/* Tabela Comparativa */
 .comparison-section {
   margin: 40px auto;
   overflow-x: auto;
@@ -363,8 +361,9 @@ h1 {
 }
 
 .comparison-table {
-  min-width: 600px;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   border-collapse: collapse;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.02);
@@ -373,6 +372,7 @@ h1 {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+
 
 .comparison-table th,
 .comparison-table td {
