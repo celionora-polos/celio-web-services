@@ -361,7 +361,9 @@ h1 {
 
 .comparison-table {
   width: 100%;
-  border-collapse: collapse;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.02);
   color: var(--text);
@@ -372,8 +374,9 @@ h1 {
 
 .comparison-table th, 
 .comparison-table td {
-  padding: 12px 10px;
+  padding: 14px 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
 }
 
 .comparison-table th {
@@ -385,42 +388,51 @@ h1 {
 /* Estilos específicos para mobile */
 @media (max-width: 767px) {
   .comparison-section {
-    padding: 0;
+    padding: 0 10px;
     margin: 30px auto;
   }
   
   .comparison-table {
     display: block;
-    width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
+    background: transparent;
+    box-shadow: none;
   }
   
-  .comparison-table thead,
-  .comparison-table tbody,
-  .comparison-table tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+  .comparison-table table {
+    width: auto;
+    min-width: 100%;
+    border-spacing: 0;
   }
   
   .comparison-table th,
   .comparison-table td {
-    min-width: 120px;
-    padding: 10px 8px;
+    padding: 12px 10px;
     font-size: 0.85rem;
+    white-space: normal;
+    min-width: 120px;
   }
   
   .comparison-table th:first-child,
   .comparison-table td:first-child {
     position: sticky;
     left: 0;
-    background-color: rgba(30, 27, 41, 0.9);
+    background-color: var(--dark-bg);
     z-index: 1;
-    min-width: 150px;
+    min-width: 140px;
     text-align: left;
-    padding-left: 12px;
+    padding-left: 15px;
+    border-right: 2px solid rgba(255,255,255,0.2);
+  }
+  
+  .comparison-table tr {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  
+  .comparison-table thead tr th {
+    background-color: rgba(138, 79, 255, 0.1);
   }
 }
 
@@ -428,7 +440,7 @@ h1 {
 @media (min-width: 768px) and (max-width: 1023px) {
   .comparison-table th,
   .comparison-table td {
-    padding: 10px 8px;
+    padding: 12px 10px;
     font-size: 0.9rem;
   }
 }
