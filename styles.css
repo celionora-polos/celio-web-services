@@ -329,7 +329,6 @@ h1 {
 }
 
 /* Botão Flutuante WhatsApp */
-/* Botão Flutuante WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -344,7 +343,7 @@ h1 {
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  z-index: 9999; /* Importante para ficar acima de tudo */
+  z-index: 9999;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -353,28 +352,33 @@ h1 {
   transform: scale(1.1);
 }
 
-/* Tabela Comparativa */
+/* Tabela Comparativa - Versão Melhorada */
 .comparison-section {
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 15px;
+}
+
+.comparison-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .comparison-table {
   width: 100%;
-  max-width: 100%;
+  min-width: 600px;
   border-collapse: separate;
   border-spacing: 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.02);
   color: var(--text);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .comparison-table th, 
 .comparison-table td {
-  padding: 14px 12px;
+  padding: 16px 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.95rem;
 }
@@ -383,64 +387,55 @@ h1 {
   background-color: rgba(255, 255, 255, 0.05);
   color: var(--primary-color);
   font-weight: 600;
+  position: relative;
 }
 
-/* Estilos específicos para mobile */
+.comparison-table td:first-child,
+.comparison-table th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: var(--dark-bg);
+  text-align: left;
+  padding-left: 20px;
+  min-width: 160px;
+  border-right: 2px solid rgba(255,255,255,0.2);
+  z-index: 2;
+}
+
+/* Estilos para mobile */
 @media (max-width: 767px) {
   .comparison-section {
     padding: 0 10px;
-    margin: 30px auto;
   }
   
-  .comparison-table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    background: transparent;
-    box-shadow: none;
+  .comparison-table-container {
+    border-radius: 8px;
   }
   
-  .comparison-table table {
-    width: auto;
-    min-width: 100%;
-    border-spacing: 0;
-  }
-  
-  .comparison-table th,
+  .comparison-table th, 
   .comparison-table td {
-    padding: 12px 10px;
-    font-size: 0.85rem;
-    white-space: normal;
-    min-width: 120px;
+    padding: 14px 10px;
+    font-size: 0.9rem;
   }
   
-  .comparison-table th:first-child,
-  .comparison-table td:first-child {
-    position: sticky;
-    left: 0;
-    background-color: var(--dark-bg);
-    z-index: 1;
-    min-width: 140px;
-    text-align: left;
+  .comparison-table td:first-child,
+  .comparison-table th:first-child {
     padding-left: 15px;
-    border-right: 2px solid rgba(255,255,255,0.2);
+    min-width: 140px;
   }
   
-  .comparison-table tr {
-    background-color: rgba(255, 255, 255, 0.02);
-  }
-  
-  .comparison-table thead tr th {
-    background-color: rgba(138, 79, 255, 0.1);
+  .comparison-table th:not(:first-child)::after,
+  .comparison-table td:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
   }
 }
 
-/* Melhorias para tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .comparison-table th,
-  .comparison-table td {
-    padding: 12px 10px;
-    font-size: 0.9rem;
-  }
+.comparison-table tr:hover td {
+  background-color: rgba(138, 79, 255, 0.05);
 }
