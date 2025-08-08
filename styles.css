@@ -327,3 +327,44 @@ h1 {
   border-top: 4px solid var(--primary-color);
   animation: spin 1s linear infinite;
 }
+
+/* Botão Flutuante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe57;
+}
+
+/* Tabela Comparativa */
+.comparison-section {
+  margin: 40px auto;
+  overflow-x: auto;
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: rgba(255,255,255,0.02);
+  color: var(--text);
+}
+.comparison-table th, .comparison-table td {
+  padding: 12px 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.comparison-table th {
+  background-color: rgba(255,255,255,0.05);
+  color: var(--primary-color);
+  font-weight: 600;
+}
