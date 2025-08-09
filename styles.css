@@ -362,18 +362,28 @@ h1 {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px; /* Espaço para scroll */
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+
+  /* Esconder scrollbar */
+  -ms-overflow-style: none;  /* IE e Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.comparison-table-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
 }
 
 .comparison-table {
   width: 100%;
-  min-width: 600px;
+  min-width: auto; /* Removido min-width fixo */
   border-collapse: separate;
   border-spacing: 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.02);
   color: var(--text);
+  table-layout: auto;
 }
 
 .comparison-table th, 
@@ -381,6 +391,10 @@ h1 {
   padding: 16px 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.95rem;
+
+  /* Quebra de texto para não cortar */
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .comparison-table th {
@@ -402,6 +416,11 @@ h1 {
   z-index: 2;
 }
 
+/* Hover linha */
+.comparison-table tr:hover td {
+  background-color: rgba(138, 79, 255, 0.05);
+}
+
 /* Estilos para mobile */
 @media (max-width: 767px) {
   .comparison-section {
@@ -414,16 +433,20 @@ h1 {
   
   .comparison-table th, 
   .comparison-table td {
-    padding: 14px 10px;
-    font-size: 0.9rem;
+    padding: 10px 6px;
+    font-size: 0.85rem;
+    white-space: nowrap; /* evita quebra dentro das células */
   }
   
   .comparison-table td:first-child,
   .comparison-table th:first-child {
-    padding-left: 15px;
-    min-width: 140px;
+    position: static; /* desativa sticky no mobile para evitar bugs */
+    background-color: var(--dark-bg);
+    border-right: none;
+    min-width: auto;
+    padding-left: 10px;
   }
-  
+
   .comparison-table th:not(:first-child)::after,
   .comparison-table td:not(:first-child)::after {
     content: "";
@@ -434,8 +457,4 @@ h1 {
     height: 100%;
     background: rgba(255,255,255,0.1);
   }
-}
-
-.comparison-table tr:hover td {
-  background-color: rgba(138, 79, 255, 0.05);
 }
